@@ -7,7 +7,14 @@
         gap: 30px;
         @extend %list-unstyled;
         &---item {
+            position: relative;
+            transition: all 2s ease-in-out;
+            &:hover .design__hover {
+                display: block;
+            }
             &--info {
+                position: relative;
+                z-index: 2;
                 text-align: center;
                 &-title {
                     @include font(normal, 500, 40px, 48px);
@@ -19,6 +26,13 @@
                     @extend %link-styled;
                     letter-spacing: 5px;
                     text-transform: uppercase;
+                    &::after {
+                        content: "";
+                        width: 5px;
+                        height: 10px;
+                        display: inline-block;
+                        background-image: url(../images/icons/next.svg);
+                    }
                 }
             }
             &_web {
@@ -40,5 +54,18 @@
                 background-image: url(../images/design_img3.jpg);
             }
         }
+    }
+    &__hover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: $peach;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+        border-radius: 15px;
     }
 }

@@ -1,5 +1,10 @@
 .header {
     width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 2;
+    display: block;
+    background-color: $white;
     .nav {
         padding: 65px 0;
         @include flex(row, space-between, center);
@@ -13,6 +18,11 @@
                     color: $dark-black;
                     text-decoration: none;
                     letter-spacing: 2px;
+                    transition: all 5s ease-in-out;
+                    &:hover {
+                        text-decoration-line: underline;
+                        text-decoration-color: $black;
+                    }
                 }
             }
         }
