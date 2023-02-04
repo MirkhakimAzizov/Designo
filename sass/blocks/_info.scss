@@ -1,0 +1,49 @@
+.info {
+    padding-bottom: 160px;
+    &__list {
+        @include flex(row, space-between, center);
+        gap: 30px;
+        @extend %list-unstyled;
+        &---item {
+            &--img {
+                position: relative;
+                max-width: 350px;
+                @include flex(row, center, center);
+                &_bg {
+                    position: absolute;
+                    z-index: -1;
+                    display: block;
+                    width: 202px;
+                    height: 202px;
+                    border-radius: 50%;
+                    background: linear-gradient(90deg, rgba(93, 2, 2, 0.0001) 0%, rgba(93, 2, 2, 0.497569) 100%);
+                    mix-blend-mode: normal;
+                    opacity: 0.2;
+                }
+                &_one {
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                }
+                &_two {
+                    transform: matrix(0, 1, 1, 0, 0, 0);
+                }
+                &_tree {
+                    transform: matrix(0, -1, -1, 0, 0, 0);
+                }
+            }
+            &--info {
+                padding-top: 48px;
+                text-align: center;
+                &-title {
+                    @include font(normal, 500, 20px, 26px);
+                    padding-bottom: 32px;
+                    letter-spacing: 5px;
+                    color: $dark-black;
+                }
+                &-text {
+                    @extend %text;
+                    color: $dark-black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.project {
+    &__inner {
+        @include flex(row, space-between, center);
+        padding: 72px 95px;
+        background: $peach;
+        border-radius: 15px;
+        background-image: url(../images/section_bg.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+    &__info {
+        max-width: 460px;
+        &-title {
+            @include font(normal, 500, 40px, 40px);
+            color: $white;
+        }
+        &-text {
+            @extend %text;
+            color: $white;
+            padding-top: 15px;
+        }
+    }
+    &__btn {
+        @extend %link-styled;
+        padding: 17px 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $dark-black;
+        background: $white;
+        border-radius: 8px;
+    }
+}

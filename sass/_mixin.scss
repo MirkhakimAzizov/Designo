@@ -6,6 +6,8 @@
 }
 
 @mixin font($style, $weight, $size, $height) {
+    margin: 0;
+    padding: 0;
     font-style: $style;
     font-weight: $weight;
     font-size: $size;
@@ -26,10 +28,4 @@
     width: $width;
     height: $height;
     content: "";
-}
-
-%list-unstyled {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
 }

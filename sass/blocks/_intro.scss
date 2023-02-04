@@ -1,0 +1,35 @@
+.intro {
+    &__inner {
+        @include flex(row, space-between, flex-start);
+        padding: 145px 95px 0;
+        background-color: $peach;
+        border-radius: 15px;
+        background-image: url(../../images/Oval.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+    &__info {
+        max-width: 540px;
+        &-title {
+            @include font(normal, 500, 48px, 48px);
+            color: $white;
+        }
+        &-text {
+            @extend %text;
+            color: $white;
+            padding: 20px 0 40px;
+        }
+        &-link {
+            @extend %link-styled;
+            padding: 16px 24px;
+            background: $white;
+            border-radius: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $dark-black;
+        }
+    }
+    &__img {
+        border-radius: 31px 31px 0 0;
+    }
+}

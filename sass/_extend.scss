@@ -1,0 +1,26 @@
+%text {
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+%list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+%link-styled {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $white;
+}
