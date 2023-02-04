@@ -1,4 +1,6 @@
 .project {
+    position: relative;
+    bottom: -72px;
     &__inner {
         @include flex(row, space-between, center);
         padding: 72px 95px;
