@@ -1,3 +1,4 @@
+// desktop screen
 .design {
     padding: 160px 0;
     &__list {
@@ -67,5 +68,95 @@
         mix-blend-mode: normal;
         opacity: 0.8;
         border-radius: 15px;
+    }
+}
+
+// Tablet screen
+@media only screen and (max-width:768px) {
+    .design {
+        padding: 120px 0;
+        &__list {
+            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            &---item {
+                background-size: 100% auto;
+                border-radius: 15px;
+                &--info {
+                    text-align: center;
+                    &-title {
+                        @include font(normal, 500, 28px, 36px);
+                        letter-spacing: 1.4px;
+                        color: $white;
+                        margin-bottom: 12px;
+                    }
+                    &-link {
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                    }
+                }
+                &_web {
+                    padding: 53px 210px;
+                    background-image: url(../images/design_img1.jpg);
+                    background-position: center bottom;
+                }
+                &_app {
+                    padding: 53px 215px;
+                    background-image: url(../images/design_img2.jpg);
+                    background-position: center center;
+                }
+                &_graph {
+                    padding: 53px 160px;
+                    background-image: url(../images/design_img3.jpg);
+                    background-position: center top;
+                }
+            }
+        }
+    }
+}
+
+// Tablet screen
+@media only screen and (max-width:375px) {
+    .design {
+        padding: 120px 0;
+        &__list {
+            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            &---item {
+                background-size: 100% 100%;
+                border-radius: 15px;
+                background-repeat: no-repeat;
+                mix-blend-mode: normal;
+                &--info {
+                    text-align: center;
+                    &-title {
+                        @include font(normal, 500, 28px, 36px);
+                        letter-spacing: 2px;
+                        color: $white;
+                        margin-bottom: 24px;
+                    }
+                    &-link {
+                        letter-spacing: 5px;
+                        text-transform: uppercase;
+                    }
+                }
+                &_web {
+                    padding: 90px 0;
+                    background-image: url(../images/design_img1.jpg);
+                    background-position: center center;
+                }
+                &_app {
+                    padding: 90px 0;
+                    background-image: url(../images/design_img2.jpg);
+                    background-position: center center;
+                }
+                &_graph {
+                    padding: 90px 0;
+                    background-image: url(../images/design_img3.jpg);
+                    background-position: center center;
+                }
+            }
+        }
     }
 }
