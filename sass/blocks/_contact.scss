@@ -1,0 +1,263 @@
+// Desktop screen
+.contact {
+    width: 100%;
+    padding: 155px 0;
+    &__inner {
+        padding: 30px 95px 55px;
+        @include flex(row, space-between, center);
+        background: $peach;
+        border-radius: 15px;
+        background-image: url(../images/contact_bg.png);
+        background-size: 640px 100%;
+        background-position: left top;
+        background-repeat: no-repeat;
+    }
+    &__info {
+        max-width: 445px;
+        &-title {
+            @include font(normal, 500, 48px, 48px);
+            color: $white;
+        }
+        &-text {
+            @extend %text;
+            padding-top: 32px;
+            color: $white;
+        }
+    }
+    &__form {
+        max-width: 380px;
+        @include flex(column, flex-start, flex-end);
+        &--label {
+            &-text {
+                width: 100%;
+                width: 380px;
+                @include font(normal, 500, 15px, 26px);
+                color: $white;
+                padding: 25px 11px 11px;
+                background: none;
+                border: none;
+                border-bottom: 1px solid $white;
+                &::placeholder {
+                    @include font(normal, 500, 15px, 26px);
+                    color: $white;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+                &:focus {
+                    border-bottom: 3px solid $white;
+                    outline: none;
+                }
+            }
+            &-textarea {
+                padding: 25px 11px 75px;
+                margin-bottom: 24px;
+            }
+        }
+        &-btn {
+            border: none;
+            background: $white;
+            border-radius: 8px;
+            text-align: center;
+            letter-spacing: 1px;
+            @include font(normal, 500, 15px, 22px);
+            display: block;
+            padding: 15px 48px;
+            text-transform: uppercase;
+            color: $dark-black;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                color: $white;
+                background: $light-peach;
+            }
+        }
+    }
+}
+
+// Max tablet screen
+@media only screen and (max-width: 992px) {
+    .container {
+        padding: 0 40px;
+    }
+    .contact {
+        width: 100%;
+        padding: 155px 0;
+        &__inner {
+            padding: 70px 60px;
+            @include flex(column, space-between, center);
+            background-size: auto;
+            background-position: -100px top;
+            background-repeat: no-repeat;
+        }
+        &__info {
+            max-width: 570px;
+            &-title {
+                @include font(normal, 500, 48px, 48px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 32px;
+                color: $white;
+            }
+        }
+        &__form {
+            max-width: 570px;
+            @include flex(column, flex-start, flex-end);
+            &--label {
+                &-text {
+                    width: 100%;
+                    width: 570px;
+                    @include font(normal, 500, 15px, 26px);
+                    padding: 25px 20px 11px;
+                }
+                &-textarea {
+                    padding: 25px 20px 75px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
+
+// Tablet screen
+@media only screen and (max-width: 769px) {
+    .container {
+        padding: 0 40px;
+    }
+    .contact {
+        width: 100%;
+        padding: 155px 0;
+        &__inner {
+            padding: 70px 60px;
+            @include flex(column, space-between, center);
+            background-size: auto;
+            background-position: -100px top;
+            background-repeat: no-repeat;
+        }
+        &__info {
+            max-width: 570px;
+            &-title {
+                @include font(normal, 500, 48px, 48px);
+                color: $white;
+            }
+            &-text {
+                @extend %text;
+                padding-top: 32px;
+                color: $white;
+            }
+        }
+        &__form {
+            max-width: 570px;
+            @include flex(column, flex-start, flex-end);
+            &--label {
+                &-text {
+                    width: 100%;
+                    width: 570px;
+                    @include font(normal, 500, 15px, 26px);
+                    padding: 25px 20px 11px;
+                }
+                &-textarea {
+                    padding: 25px 20px 75px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
+
+//Max mobile screen
+@media only screen and (max-width: 480px) {
+    .container {
+        padding: 0 24px;
+    }
+    .contact {
+        width: 100%;
+        padding: 100px 0 10px;
+        background: $peach;
+        background-image: url(../images/contact_bg.png);
+        background-size: 300px;
+        background-repeat: repeat-x;
+        background-position: -100px 100px;
+        &__inner {
+            padding: 72px 0px;
+            @include flex(column, space-between, center);
+            background: none;
+        }
+        &__info {
+            max-width: 325px;
+            text-align: center;
+            &-title {
+                @include font(normal, 500, 32px, 36px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 32px;
+                color: $white;
+            }
+        }
+        &__form {
+            max-width: 325px;
+            @include flex(column, center, center);
+            &--label {
+                &-text {
+                    width: 100%;
+                    width: 325px;
+                    @include font(normal, 500, 15px, 26px);
+                    padding: 25px 20px 11px;
+                }
+                &-textarea {
+                    padding: 25px 20px 75px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
+
+//Mobile screen
+@media only screen and (max-width: 376px) {
+    .container {
+        padding: 0 24px;
+    }
+    .contact {
+        width: 100%;
+        padding: 100px 0 10px;
+        background: $peach;
+        background-image: url(../images/contact_bg.png);
+        background-size: 300px;
+        background-repeat: repeat-x;
+        background-position: -100px 100px;
+        &__inner {
+            padding: 72px 0px;
+            @include flex(column, space-between, center);
+            background: none;
+        }
+        &__info {
+            max-width: 325px;
+            text-align: center;
+            &-title {
+                @include font(normal, 500, 32px, 36px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 32px;
+                color: $white;
+            }
+        }
+        &__form {
+            max-width: 325px;
+            @include flex(column, center, center);
+            &--label {
+                &-text {
+                    width: 100%;
+                    width: 325px;
+                    @include font(normal, 500, 15px, 26px);
+                    padding: 25px 20px 11px;
+                }
+                &-textarea {
+                    padding: 25px 20px 75px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
