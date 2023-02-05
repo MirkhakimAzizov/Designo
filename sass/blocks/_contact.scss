@@ -47,6 +47,9 @@
                     border-bottom: 3px solid $white;
                     outline: none;
                 }
+                &:focus::placeholder {
+                    opacity: 1;
+                }
             }
             &-textarea {
                 padding: 25px 11px 75px;

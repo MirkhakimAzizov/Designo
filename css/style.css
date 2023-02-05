@@ -1559,6 +1559,9 @@ img {
   border-bottom: 3px solid #FFFFFF;
   outline: none;
 }
+.contact__form--label-text:focus::placeholder {
+  opacity: 1;
+}
 .contact__form--label-textarea {
   padding: 25px 11px 75px;
   margin-bottom: 24px;
