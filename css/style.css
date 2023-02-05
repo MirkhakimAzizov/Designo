@@ -618,6 +618,8 @@ img {
   }
   .intro__style {
     z-index: -999;
+    visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -639,6 +641,8 @@ img {
   }
   .intro__style {
     z-index: -999;
+    visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -686,6 +690,8 @@ img {
   }
   .intro__style {
     z-index: -999;
+    visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -733,6 +739,8 @@ img {
   }
   .intro__style {
     z-index: -999;
+    visibility: hidden;
+    display: none;
   }
 }
 .design {
