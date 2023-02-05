@@ -1123,6 +1123,7 @@ img {
     color: #333136;
   }
   .info__style {
+    position: static;
     z-index: -999;
     display: none;
   }
@@ -1184,6 +1185,7 @@ img {
     color: #333136;
   }
   .info__style {
+    position: static;
     z-index: -999;
     display: none;
   }
@@ -1234,6 +1236,7 @@ img {
     color: #333136;
   }
   .info__style {
+    position: static;
     z-index: -999;
     display: none;
   }
@@ -1284,6 +1287,7 @@ img {
     color: #333136;
   }
   .info__style {
+    position: static;
     z-index: -999;
     display: none;
   }
