@@ -1,3 +1,4 @@
+// Desktop screen
 .project {
     position: relative;
     bottom: -72px;
@@ -34,6 +35,122 @@
         &:hover {
             background: $light-peach;
             color: $white;
+        }
+    }
+}
+
+// Max tablet screen
+@media only screen and (max-width:992px) {
+    .project {
+        position: relative;
+        bottom: -90px;
+        &__inner {
+            @include flex(column, space-between, center);
+            padding: 60px 95px;
+            background-position: 150px bottom;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+        &__info {
+            max-width: 460px;
+            text-align: center;
+            &-title {
+                @include font(normal, 500, 40px, 40px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 15px;
+            }
+        }
+        &__btn {
+            margin-top: 32px;
+        }
+    }
+}
+
+// Tablet screen
+@media only screen and (max-width:768px) {
+    .project {
+        position: relative;
+        bottom: -90px;
+        &__inner {
+            @include flex(column, space-between, center);
+            padding: 60px 95px;
+            background-position: 150px bottom;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+        &__info {
+            max-width: 460px;
+            text-align: center;
+            &-title {
+                @include font(normal, 500, 40px, 40px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 15px;
+            }
+        }
+        &__btn {
+            margin-top: 32px;
+        }
+    }
+}
+
+// Mobile screen
+@media only screen and (max-width:480px) {
+    .project {
+        position: relative;
+        bottom: -100px;
+        &__inner {
+            @include flex(column, space-between, center);
+            padding: 64px 24px;
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+        &__info {
+            max-width: 460px;
+            text-align: center;
+            &-title {
+                @include font(normal, 500, 40px, 40px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 15px;
+            }
+        }
+        &__btn {
+            margin-top: 32px;
+        }
+    }
+}
+
+// Mobile screen
+@media only screen and (max-width:375px) {
+    .project {
+        position: relative;
+        bottom: -190px;
+        &__inner {
+            @include flex(column, space-between, center);
+            padding: 64px 24px;
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+        &__info {
+            max-width: 460px;
+            text-align: center;
+            &-title {
+                @include font(normal, 500, 40px, 40px);
+                color: $white;
+            }
+            &-text {
+                padding-top: 15px;
+            }
+        }
+        &__btn {
+            margin-top: 32px;
         }
     }
 }

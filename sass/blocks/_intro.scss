@@ -48,7 +48,29 @@
     }
 }
 
-// Desktop screen
+// max tablet screen
+@media only screen and (max-width:992px) {
+    .container {
+        padding: 0 40px;
+    }
+    .intro {
+        &__inner {
+            @include flex(column, center, center);
+            text-align: center;
+            padding: 60px 60px 0;
+            background-position: 180px center;
+        }
+        &__info {
+            max-width: 540px;
+            padding-bottom: 80px;
+        }
+        &__style {
+            z-index: -999;
+        }
+    }
+}
+
+// Tablet screen
 @media only screen and (max-width:768px) {
     .container {
         padding: 0 40px;
@@ -63,6 +85,43 @@
         &__info {
             max-width: 540px;
             padding-bottom: 80px;
+        }
+        &__style {
+            z-index: -999;
+        }
+    }
+}
+
+// Max mobile screen
+@media only screen and (max-width:480px) {
+    .container {
+        padding: 0 24px;
+    }
+    .intro {
+        background-color: $peach;
+        background-image: url(../../images/Oval.png);
+        background-position: left center;
+        // padding: 0;
+        &__inner {
+            @include flex(column, center, center);
+            text-align: center;
+            padding: 50px 0 0;
+            background: none;
+        }
+        &__info {
+            max-width: 540px;
+            padding-bottom: 80px;
+            &-title {
+                @include font(normal, 500, 32px, 36px);
+                margin-bottom: 15px;
+            }
+            &-text {
+                @include font(normal, 400, 15px, 25px);
+            }
+            &-link {
+                margin-top: 25px;
+                display: inline-block;
+            }
         }
         &__style {
             z-index: -999;

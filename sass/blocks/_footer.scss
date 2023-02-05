@@ -1,3 +1,4 @@
+// Desktop screen
 .footer {
     padding: 144px 0 72px;
     background-color: $black;
@@ -26,6 +27,14 @@
     }
     &__line {
         display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        mix-blend-mode: normal;
+        opacity: 0.1;
+    }
+    &__line-mobile {
+        display: none;
         width: 100%;
         height: 2px;
         background-color: $white;
@@ -72,6 +81,186 @@
                         color: $light-peach;
                     }
                 }
+            }
+        }
+    }
+}
+
+// Max tablet screen
+@media only screen and (max-width:992px) {
+    .footer {
+        padding: 140px 0 72px;
+        background-color: $black;
+        width: 100%;
+        &__nav {
+            padding-bottom: 40px;
+            @include flex(row, space-between, center);
+            &__list {
+                width: 45%;
+                @include flex(row, space-between, center);
+                &--item {
+                    &-link {
+                        @include font(normal, 400, 14px, 14px);
+                    }
+                }
+            }
+        }
+        &__bottom {
+            padding-top: 30px;
+            @include flex(row, space-between, flex-end);
+            &---list {
+                &--title {
+                    @include font(normal, 700, 16px, 26px);
+                }
+                &--item {
+                    &-link {
+                        @include font(normal, 400, 16px, 26px);
+                    }
+                }
+            }
+            &---link {
+                width: 25%;
+            }
+        }
+    }
+}
+
+// Tablet screen
+@media only screen and (max-width:768px) {
+    .footer {
+        padding: 140px 0 72px;
+        background-color: $black;
+        width: 100%;
+        &__nav {
+            padding-bottom: 40px;
+            @include flex(row, space-between, center);
+            &__list {
+                width: 55%;
+                @include flex(row, space-between, center);
+                &--item {
+                    &-link {
+                        @include font(normal, 400, 14px, 14px);
+                    }
+                }
+            }
+        }
+        &__bottom {
+            padding-top: 30px;
+            @include flex(row, space-between, flex-end);
+            &---list {
+                &--title {
+                    @include font(normal, 700, 16px, 26px);
+                }
+                &--item {
+                    &-link {
+                        @include font(normal, 400, 16px, 26px);
+                    }
+                }
+            }
+            &---link {
+                width: 25%;
+            }
+        }
+    }
+}
+
+// Max mobile screen
+@media only screen and (max-width:480px) {
+    .footer {
+        padding: 250px 0 72px;
+        background-color: $black;
+        width: 100%;
+        &__nav {
+            padding-bottom: 40px;
+            @include flex(column, space-between, center);
+            &__logo {
+                padding-bottom: 40px;
+            }
+            &__list {
+                width: 55%;
+                @include flex(column, space-between, center);
+                &--item {
+                    padding-top: 32px;
+                    &-link {
+                        @include font(normal, 400, 14px, 14px);
+                    }
+                }
+            }
+        }
+        &__line {
+            display: none;
+        }
+        &__line-mobile {
+            display: block;
+        }
+        &__bottom {
+            padding-bottom: 40px;
+            @include flex(column, space-between, center);
+            text-align: center;
+            &---list {
+                padding-bottom: 40px;
+                &--title {
+                    @include font(normal, 700, 16px, 26px);
+                }
+                &--item {
+                    &-link {
+                        @include font(normal, 400, 16px, 26px);
+                    }
+                }
+            }
+            &---link {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// Mobile screen
+@media only screen and (max-width:375px) {
+    .footer {
+        padding: 250px 0 72px;
+        background-color: $black;
+        width: 100%;
+        &__nav {
+            padding-bottom: 40px;
+            @include flex(column, space-between, center);
+            &__logo {
+                padding-bottom: 40px;
+            }
+            &__list {
+                width: 55%;
+                @include flex(column, space-between, center);
+                &--item {
+                    padding-top: 32px;
+                    &-link {
+                        @include font(normal, 400, 14px, 14px);
+                    }
+                }
+            }
+        }
+        &__line {
+            display: none;
+        }
+        &__line-mobile {
+            display: block;
+        }
+        &__bottom {
+            padding-bottom: 40px;
+            @include flex(column, space-between, center);
+            text-align: center;
+            &---list {
+                padding-bottom: 40px;
+                &--title {
+                    @include font(normal, 700, 16px, 26px);
+                }
+                &--item {
+                    &-link {
+                        @include font(normal, 400, 16px, 26px);
+                    }
+                }
+            }
+            &---link {
+                width: 50%;
             }
         }
     }

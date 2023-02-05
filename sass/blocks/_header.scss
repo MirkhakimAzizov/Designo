@@ -1,80 +1,115 @@
-        // Desktop first
-        // Desktop screen
-        .header {
-            width: 100%;
-            height: auto;
-            position: fixed;
-            z-index: 2;
-            display: block;
-            background-color: $white;
-            .nav {
-                padding: 65px 0;
-                @include flex(row, space-between, center);
-                &__list {
-                    width: 35%;
-                    @include flex(row, space-between, center);
-                    list-style-type: none;
-                    &__item {
-                        &-link {
-                            @include font(normal, 400, 14px, 14px);
-                            color: $dark-black;
-                            text-decoration: none;
-                            letter-spacing: 2px;
-                            transition: all 5s ease-in-out;
-                            &:hover {
-                                text-decoration-line: underline;
-                                text-decoration-color: $black;
-                            }
-                        }
-                    }
-                }
-                // visually menu 
-                &__menu {
-                    width: 24px;
-                    height: 21px;
-                    &-line {
-                        width: 100%;
-                        height: 4px;
-                        margin-bottom: 4px;
-                        @include flex(column, center, flex-start);
-                        background: $black;
-                    }
-                    display: none;
-                }
-            }
-        }
-        
-        // Table screen
-        @media only screen and ( max-width:768px) {
-            .container {
-                padding: 0 40px;
-            }
-            .header {
-                .nav {
-                    &__list {
-                        width: 55%;
-                    }
-                    &__menu {
-                        display: none;
+// Desktop first
+// Desktop screen
+.header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 2;
+    display: block;
+    background-color: $white;
+    .nav {
+        padding: 65px 0;
+        @include flex(row, space-between, center);
+        &__list {
+            width: 35%;
+            @include flex(row, space-between, center);
+            list-style-type: none;
+            &__item {
+                &-link {
+                    @include font(normal, 400, 14px, 14px);
+                    color: $dark-black;
+                    text-decoration: none;
+                    letter-spacing: 2px;
+                    transition: all 5s ease-in-out;
+                    &:hover {
+                        text-decoration-line: underline;
+                        text-decoration-color: $black;
                     }
                 }
             }
         }
-        
-        // Mobile screen
-        @media only screen and ( max-width:375px) {
-            .container {
-                padding: 0 24px;
+        // visually menu 
+        &__menu {
+            width: 24px;
+            height: 21px;
+            &-line {
+                width: 100%;
+                height: 4px;
+                margin-bottom: 4px;
+                @include flex(column, center, flex-start);
+                background: $black;
             }
-            .header {
-                .nav {
-                    padding: 35px 0;
-                    &__list {
-                        display: none;
-                    }
-                    &__menu {
-                        display: block;
-                    }
-                }
+            display: none;
+        }
+    }
+}
+
+// Max table screen
+@media only screen and ( max-width:992px) {
+    .container {
+        padding: 0 40px;
+    }
+    .header {
+        .nav {
+            &__list {
+                width: 55%;
+            }
+            &__menu {
+                display: none;
             }
         }
+    }
+}
+
+// Table screen
+@media only screen and ( max-width:768px) {
+    .container {
+        padding: 0 40px;
+    }
+    .header {
+        .nav {
+            &__list {
+                width: 55%;
+            }
+            &__menu {
+                display: none;
+            }
+        }
+    }
+}
+
+// Mobile screen
+@media only screen and ( max-width:480px) {
+    .container {
+        padding: 0 24px;
+    }
+    .header {
+        .nav {
+            padding: 35px 0;
+            &__list {
+                display: none;
+            }
+            &__menu {
+                display: block;
+            }
+        }
+    }
+}
+
+// Mobile screen
+@media only screen and ( max-width:375px) {
+    .container {
+        padding: 0 24px;
+    }
+    .header {
+        .nav {
+            padding: 35px 0;
+            &__list {
+                display: none;
+            }
+            &__menu {
+                display: block;
+            }
+        }
+    }
+}
