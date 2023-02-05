@@ -102,6 +102,7 @@
             position: static;
             z-index: -999;
             display: none;
+            overflow: hidden;
         }
     }
 }
@@ -190,6 +191,7 @@
             }
         }
         &__style {
+            overflow: hidden;
             position: static;
             z-index: -999;
             display: none;
@@ -229,6 +231,7 @@
             }
         }
         &__style {
+            overflow: hidden;
             position: static;
             z-index: -999;
             display: none;
